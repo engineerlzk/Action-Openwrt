@@ -17,7 +17,7 @@ rm -rf feeds/packages/net/smartdns
 rm -rf package/lean/luci-theme-argon
 rm -rf package/lean/luci-app-wrtbwmon
 wget https://github.com/brvphoenix/luci-app-wrtbwmon/archive/release-1.6.3.tar.gz
-tar zxvf release-1.6.3.tar.gz  package/                             
+tar zxvf release-1.6.3.tar.gz  -C package/                             
 git clone https://github.com/brvphoenix/wrtbwmon.git                                                      package/wrtbwmon
 git clone https://github.com/destan19/OpenAppFilter.git                                                   package/oaf
 svn co https://github.com/Lienol/openwrt/trunk/package/diy/luci-app-adguardhome                           package/adg
