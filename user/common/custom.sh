@@ -3,7 +3,9 @@
 echo "Apply custom.sh"
 
 sed -i 's/DEPENDS.*/& \+luci-i18n-mwan3-zh-cn/g'  package/lean/luci-app-syncdial/Makefile
-sed -i 's/DEPENDS.*/& \+luci-i18n-nlbwmon-zh-cn/g'  package/lean/luci-app-wrtbwmon/Makefile
+rm -rf package/lean/default-settings/files/zzz-default-settings
+wget https://raw.githubusercontent.com/coolsnowwolf/lede/99222f49fd9f63eef575ac34f251280e6e97f3b3/package/lean/default-settings/files/zzz-default-settings -O package/lean/default-settings/files/zzz-default-settings
+
 
 git clone https://github.com/CCnut/feed-netkeeper.git -b LUCI-LUA-UCITRACK                                 package/nk
 git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git                             package/luci-theme-infinityfreedom
